@@ -2,23 +2,9 @@
 
 repo of what is asked by pft system
 
-the current task is 2025-01-12_08:18__TQ70   cyfrin solidity course on inheritance, contract factory
+the current task is 2025-01-13_10:04__PS24 Create a running progress tracking system
 
 
+The repo contains a running progress tracking system using Python and a simple SQLite database. The system includes the required fields (date, duration, distance, average speed, and perceived effort), calculates weekly progress, generates basic performance visualizations, and provides a command-line interface for easy data entry after each run.
 
-Inheritance Patterns and Factory Deployment Strategies
-Inheritance Patterns
-Base Contract: SimpleStorage
-This contract defines storage functionality with a store method, a retrieve method, and methods to manage a list of people. It serves as the foundation for further extensions.
-
-Derived Contracts:
-
-AddFiveStorage
-Inherits from SimpleStorage and overrides the store function to add 5 to the provided number before storing it.
-While the repository contains other contracts like SimpleStorage2, they are not derived from SimpleStorage. The primary focus of inheritance here is on AddFiveStorage which extends the base SimpleStorage.
-Factory Deployment Strategy
-The StorageFactory contract demonstrates a factory pattern for deploying new instances of SimpleStorage. Using the createSimpleStorageContract function, the factory creates new SimpleStorage contracts via the new keyword and stores their addresses in an array. This allows the factory to manage multiple instances and interact with them through helper functions like sfStore and sfGet to set and retrieve values on the individual deployed contracts.
-
-
-
-
+The code is public
