@@ -1,0 +1,194 @@
+/* Reset some basic default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling to center the console in the viewport and optional background image */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  /* If you want to use button-bg.jpg as your page background: */
+  background: #f0f0f0 url('button-bg.jpg') no-repeat center center;
+  background-size: cover;
+
+  font-family: sans-serif;
+}
+
+/* The main GBA console container */
+.gba-console {
+  /* Approximate proportions similar to a GBA */
+  width: 600px;
+  height: 300px;
+  background-color: #838383; /* Base GBA color */
+  border-radius: 30px;
+  position: relative;
+
+  /* Subtle gradient and shadow for depth */
+  background: linear-gradient(145deg, #8a8a8a, #777777);
+  box-shadow: 
+    0 5px 15px rgba(0,0,0,0.3),   /* Outer shadow */
+    inset 0 2px 5px rgba(255,255,255,0.1); /* Inner glow */
+
+  /* Use Flexbox for vertical arrangement:
+     Shoulder buttons, main body, start/select. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* Shoulder buttons container */
+.shoulder-buttons {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Style each shoulder button image */
+.shoulder-button {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.1s, filter 0.1s;
+}
+
+/* Press effect */
+.shoulder-button:active {
+  transform: translateY(2px);
+}
+
+/* Hover effect */
+.shoulder-button:hover {
+  filter: brightness(1.1);
+}
+
+/* Main body uses a grid layout for D-Pad (left), Screen (center), A/B Buttons (right) */
+.main-body {
+  width: 100%;
+  flex: 1; /* Expand to fill vertical space */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; 
+  align-items: center;
+}
+
+/* D-Pad positioning */
+.dpad-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto; /* center horizontally in its grid cell */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Individual D-Pad buttons */
+.dpad-button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.1s, filter 0.1s;
+}
+
+.dpad-button:hover {
+  filter: brightness(1.1);
+}
+
+
+/* Position each direction */
+.dpad-up {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dpad-down {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dpad-left {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.dpad-right {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Screen area */
+.screen {
+  width: 200px;
+  height: 150px;
+  margin: 0 auto;
+  background: #000; /* or any color to represent the game screen */
+  border: 2px solid #666;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.7);
+  position: relative;
+}
+
+/* If you have a frame.png to overlay, you could style it:
+.screen-frame {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+*/
+
+/* A and B buttons styling */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.action-button {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.1s, filter 0.1s;
+}
+
+.action-button:hover {
+  filter: brightness(1.1);
+}
+
+.action-button:active {
+  transform: translateY(2px);
+}
+
+/* Start / Select buttons at the bottom center
+   (Now inverted: Select is first, Start is second) */
+.center-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 10px;
+}
+
+.center-button {
+  width: 60px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.1s, filter 0.1s;
+}
+
+.center-button:hover {
+  filter: brightness(1.1);
+}
+
+.center-button:active {
+  transform: scale(0.95);
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GBA Layout</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="gba-console">
+    <!-- Shoulder Buttons -->
+    <div class="shoulder-buttons">
+      <!-- Using L for left shoulder, R for right shoulder -->
+      <img src="button-L.png" alt="L Button" class="shoulder-button" id="l-button" />
+      <img src="button-R.png" alt="R Button" class="shoulder-button" id="r-button" />
+    </div>
+
+    <!-- Main Body: D-Pad, Screen, A/B Buttons -->
+    <div class="main-body">
+      <!-- D-Pad -->
+      <div class="dpad-container">
+        <!-- Use button-PlayerIndex.png for all D-Pad directions -->
+        <img src="button-PlayerIndex.png" alt="Up" class="dpad-button dpad-up" />
+        <img src="button-PlayerIndex.png" alt="Left" class="dpad-button dpad-left" />
+        <img src="button-PlayerIndex.png" alt="Right" class="dpad-button dpad-right" />
+        <img src="button-PlayerIndex.png" alt="Down" class="dpad-button dpad-down" />
+      </div>
+
+      <!-- Screen -->
+      <div class="screen">
+        <!-- Optional frame image if you want a border or frame effect:
+             <img src="frame.png" alt="Screen Frame" class="screen-frame" />
+        -->
+      </div>
+
+      <!-- A / B Buttons -->
+      <div class="action-buttons">
+        <img src="button-A.png" alt="A Button" class="action-button a-button" />
+        <img src="button-B.png" alt="B Button" class="action-button b-button" />
+      </div>
+    </div>
+
+    <!-- Start/Select: Inverted positions (Select left, Start right) -->
+    <div class="center-buttons">
+      <img src="button-SELECT.png" alt="Select Button" class="center-button" id="select-button" />
+      <img src="button-START.png" alt="Start Button" class="center-button" id="start-button" />
+    </div>
+  </div>
+  
+</body>
+</html>
